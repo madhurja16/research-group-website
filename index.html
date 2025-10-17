@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Favicon Added -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -33,7 +35,7 @@
             object-fit: cover;
             opacity: 0;
             animation-name: fadeEffect;
-            animation-duration: 25s; /* 5s per image * 5 images */
+            animation-duration: 30s; /* 5s per image * 6 images */
             animation-iteration-count: infinite;
             transition: transform 0.5s ease-in-out;
         }
@@ -44,6 +46,17 @@
         .slideshow-image:nth-child(4) { animation-delay: 15s; }
         .slideshow-image:nth-child(5) { animation-delay: 20s; }
         .slideshow-image:nth-child(6) { animation-delay: 25s; }
+        
+        /* Style for active navigation link */
+        .nav-link.active {
+            color: #2563EB; /* blue-600 */
+            font-weight: 600;
+        }
+
+        /* Styles for Photo Gallery Modal */
+        #gallery-modal.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -57,11 +70,12 @@
                     <a href="#home" class="text-xl font-bold text-gray-900">CCIC@IITM</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
-                    <a href="#research" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Research</a>
-                    <a href="#publications" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Publications</a>
-                    <a href="#team" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Team</a>
-                    <a href="#news" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">News</a>
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#research" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">Research</a>
+                    <a href="#publications" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">Publications</a>
+                    <a href="#team" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">Team</a>
+                    <a href="#news" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">News</a>
+                    <a href="#gallery" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors">Gallery</a>
                     <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all text-sm font-semibold">Join Us</a>
                 </nav>
                 <button id="mobile-menu-btn" class="md:hidden">
@@ -76,6 +90,7 @@
             <a href="#publications" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Publications</a>
             <a href="#team" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Team</a>
             <a href="#news" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">News</a>
+            <a href="#gallery" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Gallery</a>
             <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Join Us</a>
         </div>
     </header>
@@ -83,15 +98,15 @@
     <main>
         <!-- Home Section -->
         <section id="home" class="section relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-             <!-- Slideshow Background -->
+            <!-- Slideshow Background -->
             <div class="absolute top-0 left-0 w-full h-full z-0">
-                 <div class="slideshow-container">
+                <div class="slideshow-container">
                     <img src="SlideShow_ANJANA.png" alt="Abstract molecular structure" class="slideshow-image">
                     <img src="SlideShow_MADHURJA.png" alt="Chemical lab equipment" class="slideshow-image">
-                    <img src="SlideShow_SUDHIN.png" alt="Graphene structure visualization" class="slideshow-image">
                     <img src="SlideShow_JOGESH.png" alt="Scientist working in a lab" class="slideshow-image">
-                    <img src="SlideShow_ATHIRA.png" alt="3D molecular model" class="slideshow-image">
+                    <img src="SlideShow_SUDHIN.png" alt="Graphene structure visualization" class="slideshow-image">
                     <img src="SlideShow_STUTI.png" alt="3D molecular model" class="slideshow-image">
+                    <img src="SlideShow_ATHIRA.png" alt="Advanced scientific equipment" class="slideshow-image">
                 </div>
                 <div class="absolute inset-0 bg-black/60"></div>
             </div>
@@ -118,7 +133,7 @@
                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Heterogeneous+Catalysis" alt="Heterogeneous Catalysis" class="w-full h-40 object-cover rounded-md mb-4">
                         <div class="flex-grow">
                             <h3 class="text-xl font-bold mb-2">Heterogeneous Catalysis</h3>
-                            <p class="text-gray-600 text-sm">Modeling reaction mechanisms on solid surfaces to design efficient catalysts for industrial applications, such as CO2 reduction and ammonia synthesis.</p>
+                            <p class="text-gray-600 text-sm">Modeling reaction mechanisms on solid surfaces to design efficient catalysts for industrial applications, such as CO₂ reduction and ammonia synthesis.</p>
                         </div>
                     </div>
                     <!-- Research Area 2 -->
@@ -127,7 +142,7 @@
                          <div class="flex-grow">
                             <h3 class="text-xl font-bold mb-2">Electrocatalysis & Energy</h3>
                             <p class="text-gray-600 text-sm">Investigating electrochemical reactions for energy conversion and storage, including water splitting, fuel cells, and battery interfaces.</p>
-                        </div>
+                         </div>
                     </div>
                     <!-- Research Area 3 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
@@ -135,7 +150,7 @@
                          <div class="flex-grow">
                             <h3 class="text-xl font-bold mb-2">Surface & Interfacial Science</h3>
                             <p class="text-gray-600 text-sm">Understanding the structure and dynamics of solid-liquid and solid-gas interfaces at the atomic scale using first-principles simulations.</p>
-                        </div>
+                         </div>
                     </div>
                     <!-- Research Area 4 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
@@ -143,7 +158,7 @@
                          <div class="flex-grow">
                             <h3 class="text-xl font-bold mb-2">Materials Informatics</h3>
                             <p class="text-gray-600 text-sm">Applying machine learning and data-driven approaches to accelerate the discovery and design of novel catalytic materials.</p>
-                        </div>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -154,7 +169,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured Publications</h2>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit Dr. Kunnikuruvan's <a href="https://scholar.google.com/citations?user=DCJi8BkAAAAJ&hl=en" class="text-blue-600 font-medium hover:underline">Google Scholar profile</a>.</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit Dr. Kunnikuruvan's <a href="https://scholar.google.com/citations?user=DCJi8BkAAAAJ&hl=en" target="_blank" class="text-blue-600 font-medium hover:underline">Google Scholar profile</a>.</p>
                 </div>
                 <div id="publications-list" class="space-y-8 max-w-4xl mx-auto">
                     <!-- JS will populate this -->
@@ -185,9 +200,16 @@
                     </div>
                 </div>
                 <!-- Members -->
-                <div>
+                <div class="mb-16">
                     <h3 class="text-2xl font-bold text-center mb-8">Researchers & Students</h3>
-                    <div id="team-members-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div id="team-members-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+                <!-- Alumni Section Added -->
+                <div>
+                    <h3 class="text-2xl font-bold text-center mb-8">Alumni</h3>
+                    <div id="team-alumni-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
                         <!-- JS will populate this -->
                     </div>
                 </div>
@@ -206,6 +228,19 @@
                 </div>
             </div>
         </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="section bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                   <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Photo Gallery</h2>
+                   <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A glimpse into our lab, conferences, and team activities.</p>
+               </div>
+               <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                   <!-- JS will populate this -->
+               </div>
+           </div>
+       </section>
         
         <!-- Contact Section -->
         <section id="contact" class="section bg-blue-700 text-white py-20">
@@ -223,6 +258,17 @@
             </div>
         </section>
 
+        <!-- Gallery Modal -->
+        <div id="gallery-modal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg max-w-4xl max-h-full w-full h-auto p-4 relative">
+                <button id="modal-close-btn" class="absolute -top-4 -right-4 bg-white rounded-full p-2 z-10">
+                    <i data-feather="x" class="text-gray-800"></i>
+                </button>
+                <img id="modal-image" src="" alt="Gallery image" class="w-full h-auto max-h-[80vh] object-contain rounded-md">
+                <p id="modal-caption" class="text-center text-gray-700 mt-4"></p>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -239,101 +285,38 @@
         // You can easily update the website content by modifying the data below.
 
         const publications = [
-            {
-                title: "Understanding the Role of Surface Oxides in CO₂ Electroreduction on Copper",
-                authors: "Sharma, A., Kumar, R., Kunnikuruvan, S.",
-                journal: "Journal of the American Chemical Society",
-                year: "2025",
-                link: "#"
-            },
-            {
-                title: "A DFT Study on the Mechanism of Nitrogen Reduction to Ammonia on Ruthenium-based Catalysts",
-                authors: "Pillai, N., Reddy, V., Kunnikuruvan, S.",
-                journal: "ACS Catalysis",
-                year: "2025",
-                link: "#"
-            },
-            {
-                title: "First-Principles Analysis of the Solid-Electrolyte Interphase on Lithium Metal Anodes",
-                authors: "Gupta, S., Kunnikuruvan, S.",
-                journal: "Chemistry of Materials",
-                year: "2024",
-                link: "#"
-            },
-            {
-                title: "Machine Learning-accelerated Screening of Bimetallic Alloys for Oxygen Evolution Reaction",
-                authors: "Kumar, R., Sharma, A., Kunnikuruvan, S.",
-                journal: "Journal of Physical Chemistry Letters",
-                year: "2024",
-                link: "#"
-            },
-            {
-                title: "Water Adsorption and Dissociation on Ceria Surfaces: A Computational Perspective",
-                authors: "Reddy, V., Kunnikuruvan, S.",
-                journal: "The Journal of Chemical Physics",
-                year: "2023",
-                link: "#"
-            }
+            { title: "Understanding the Role of Surface Oxides in CO₂ Electroreduction on Copper", authors: "Sharma, A., Kumar, R., Kunnikuruvan, S.", journal: "Journal of the American Chemical Society", year: "2025", link: "#" },
+            { title: "A DFT Study on the Mechanism of Nitrogen Reduction to Ammonia on Ruthenium-based Catalysts", authors: "Pillai, N., Reddy, V., Kunnikuruvan, S.", journal: "ACS Catalysis", year: "2025", link: "#" },
+            { title: "First-Principles Analysis of the Solid-Electrolyte Interphase on Lithium Metal Anodes", authors: "Gupta, S., Kunnikuruvan, S.", journal: "Chemistry of Materials", year: "2024", link: "#" },
+            { title: "Machine Learning-accelerated Screening of Bimetallic Alloys for Oxygen Evolution Reaction", authors: "Kumar, R., Sharma, A., Kunnikuruvan, S.", journal: "Journal of Physical Chemistry Letters", year: "2024", link: "#" },
+            { title: "Water Adsorption and Dissociation on Ceria Surfaces: A Computational Perspective", authors: "Reddy, V., Kunnikuruvan, S.", journal: "The Journal of Chemical Physics", year: "2023", link: "#" }
         ];
 
         const teamMembers = [
-            {
-                name: "Jogeshwar Chatria",
-                role: "PhD Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=AS"
-            },
-            {
-                name: "Rahul Kumar",
-                role: "PhD Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=RK"
-            },
-            {
-                name: "Vidya Reddy",
-                role: "PhD Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=VR"
-            },
-            {
-                name: "Nikhil Pillai",
-                role: "PhD Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=NP"
-            },
-            {
-                name: "Sneha Gupta",
-                role: "PhD Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=SG"
-            },
-            {
-                name: "Arjun Menon",
-                role: "Masters Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=AM"
-            },
-             {
-                name: "Priya Singh",
-                role: "Masters Student",
-                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=PS"
-            }
+            { name: "Jogeshwar Chhatria", join: "2022-present", role: "PhD Student" }, { name: "Madhurja Buragohain", role: "PhD Student" }, { name: "Sudhin Rathnakumaran", role: "PhD Student" }, { name: "Athira Jayasankar", role: "PhD Student" }, { name: "Athira K", role: "PhD Student" }, { name: "Stuti Asthana", role: "PhD Student" }, { name: "Rahul Kumar", role: "PhD Student" }, { name: "Vidya Reddy", role: "PhD Student" }, { name: "Nikhil Pillai", role: "PhD Student" }, { name: "Sneha Gupta", role: "PhD Student" }, { name: "Arjun Menon", role: "Masters Student" }, { name: "Priya Singh", role: "Masters Student" }
+        ]; 
+
+        const teamAlumni = [
+            { name: "Dr. Alok Sharma", role: "Postdoc at MIT", where: "PhD, 2024" }, { name: "Dr. Meera Iyer", role: "Scientist at Shell", where: "PhD, 2023" }, { name: "Rajesh Gupta", role: "Data Scientist at Google", where: "MSc, 2022" },
         ];
 
         const newsItems = [
-            {
-                title: "Dr. Kunnikuruvan receives the Young Scientist Award",
-                date: "October 15, 2025",
-                excerpt: "Dr. Kunnikuruvan was recognized by the Chemical Research Society of India for his significant contributions to computational catalysis.",
-                imageUrl: "https://placehold.co/400x250/3B82F6/FFFFFF?text=Award"
-            },
-            {
-                title: "CCIC welcomes new PhD students",
-                date: "September 1, 2025",
-                excerpt: "We are excited to welcome Nikhil Pillai and Sneha Gupta to the lab. They will be working on electrocatalysis and materials informatics.",
-                imageUrl: "https://placehold.co/400x250/10B981/FFFFFF?text=Welcome"
-            },
-            {
-                title: "Our new high-performance computing cluster is online",
-                date: "August 20, 2025",
-                excerpt: "The new 'ChemCompute' cluster significantly enhances our computational capacity, enabling larger and more complex simulations.",
-                imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=HPC+Cluster"
-            }
+            { title: "Dr. Kunnikuruvan receives the Young Scientist Award", date: "October 15, 2025", excerpt: "Dr. Kunnikuruvan was recognized by the Chemical Research Society of India for his significant contributions to computational catalysis.", imageUrl: "https://placehold.co/400x250/3B82F6/FFFFFF?text=Award" },
+            { title: "CCIC welcomes new PhD students", date: "September 1, 2025", excerpt: "We are excited to welcome Nikhil Pillai and Sneha Gupta to the lab. They will be working on electrocatalysis and materials informatics.", imageUrl: "https://placehold.co/400x250/10B981/FFFFFF?text=Welcome" },
+            { title: "Our new high-performance computing cluster is online", date: "August 20, 2025", excerpt: "The new 'ChemCompute' cluster significantly enhances our computational capacity, enabling larger and more complex simulations.", imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=HPC+Cluster" }
         ];
+        
+        const galleryImages = [
+            { src: "https://images.unsplash.com/photo-1518152006812-edb29b0d380c?q=80&w=2070&auto=format&fit=crop", caption: "Our state-of-the-art computational cluster." },
+            { src: "https://images.unsplash.com/photo-1574825964581-227c15671550?q=80&w=2070&auto=format&fit=crop", caption: "Team discussion on recent findings." },
+            { src: "https://images.unsplash.com/photo-1558137340-975d1f7c2a49?q=80&w=2070&auto=format&fit=crop", caption: "Presenting our work at an international conference." },
+            { src: "https://images.unsplash.com/photo-1590650213764-326b528b0326?q=80&w=2070&auto=format&fit=crop", caption: "Collaborative coding session." },
+            { src: "https://images.unsplash.com/photo-1627893452295-c21538f498c3?q=80&w=2070&auto=format&fit=crop", caption: "Celebrating a successful publication." },
+            { src: "https://images.unsplash.com/photo-1581092446347-7d033163a23d?q=80&w=2070&auto=format&fit=crop", caption: "Detailed analysis of simulation results." },
+            { src: "https://plus.unsplash.com/premium_photo-1679923861213-91523414909a?q=80&w=2070&auto=format&fit=crop", caption: "Group outing to celebrate the end of the semester." },
+            { src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop", caption: "Weekly group meeting." }
+        ];
+
 
         // --- DYNAMIC CONTENT RENDERING ---
 
@@ -356,19 +339,29 @@
             });
         }
 
-        function renderTeamMembers() {
-            const list = document.getElementById('team-members-list');
+        function renderTeam(members, containerId) {
+             const list = document.getElementById(containerId);
+            if (!list) return;
             list.innerHTML = '';
-            teamMembers.forEach(member => {
+            members.forEach(member => {
                 const card = document.createElement('div');
                 card.className = 'text-center';
+                const initials = member.name.split(' ').map(n => n[0]).join('');
+                const imageUrl = member.imageUrl || `https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}`;
+                
+                let description = `<p class="text-blue-600">${member.role}</p>`;
+                if (member.where) {
+                    description += `<p class="text-gray-500 text-sm mt-1">${member.where}</p>`;
+                }
+
                 card.innerHTML = `
-                    <img src="${member.imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/200x200/EBF4FF/3B82F6?text=${member.name.split(' ').map(n=>n[0]).join('')}';" alt="${member.name}" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-white">
+                    <img src="${imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}';" alt="${member.name}" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-white">
                     <h4 class="font-bold text-lg">${member.name}</h4>
-                    <p class="text-blue-600">${member.role}</p>`;
+                    ${description}`;
                 list.appendChild(card);
             });
         }
+
 
         function renderNews() {
             const list = document.getElementById('news-list');
@@ -389,6 +382,39 @@
                 list.appendChild(card);
             });
         }
+        
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            const modal = document.getElementById('gallery-modal');
+            const modalImg = document.getElementById('modal-image');
+            const modalCaption = document.getElementById('modal-caption');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+
+            galleryImages.forEach(image => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'cursor-pointer group';
+                imgContainer.innerHTML = `<img src="${image.src}" alt="${image.caption}" class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 shadow-md">`;
+                imgContainer.addEventListener('click', () => {
+                    modalImg.src = image.src;
+                    modalCaption.textContent = image.caption;
+                    modal.classList.remove('hidden');
+                    feather.replace(); // To render the close icon in modal
+                });
+                grid.appendChild(imgContainer);
+            });
+            
+            const closeModal = () => {
+                modal.classList.add('hidden');
+            };
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
 
         // --- EVENT LISTENERS & INITIALIZATION ---
 
@@ -397,8 +423,10 @@
 
             // Render dynamic content
             renderPublications(3); // Initially show 3
-            renderTeamMembers();
+            renderTeam(teamMembers, 'team-members-list');
+            renderTeam(teamAlumni, 'team-alumni-list');
             renderNews();
+            renderGallery();
 
             // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -442,7 +470,35 @@
                     header.classList.remove('shadow-md');
                 }
             });
+
+            // Active nav link highlighting on scroll
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.4
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
     </script>
 </body>
 </html>
+
