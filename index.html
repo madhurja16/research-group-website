@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Synergistic AI & Robotics Laboratory | Research Group</title>
+    <title>Computational Catalysis and Interfacial Chemistry | IIT Madras</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,10 @@
             scroll-margin-top: 80px; /* Adjust for fixed header height */
         }
         @keyframes fadeEffect {
-            0% { opacity: 0; }
-            5% { opacity: 1; }
-            20% { opacity: 1; }
-            25% { opacity: 0; }
+            0% { opacity: 0; transform: scale(1.05); }
+            5% { opacity: 1; transform: scale(1); }
+            20% { opacity: 1; transform: scale(1); }
+            25% { opacity: 0; transform: scale(1.05); }
             100% { opacity: 0; }
         }
 
@@ -35,7 +35,7 @@
             animation-name: fadeEffect;
             animation-duration: 25s; /* 5s per image * 5 images */
             animation-iteration-count: infinite;
-            background-color: #333; /* Fallback color */
+            transition: transform 0.5s ease-in-out;
         }
 
         .slideshow-image:nth-child(1) { animation-delay: 0s; }
@@ -52,8 +52,8 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
-                    <img src="image.png" alt="CCIC Logo" class="h-15 w-40 rounded-md object-cover">
-                    <a href="#home" class="text-xl font-bold text-gray-900">CCIC</a>
+                    <img src="https://placehold.co/160x60/3B82F6/FFFFFF?text=CCIC+Logo" alt="CCIC Logo" class="h-12 w-auto rounded-md object-cover">
+                    <a href="#home" class="text-xl font-bold text-gray-900">CCIC@IITM</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
@@ -79,12 +79,24 @@
         </div>
     </header>
 
-    <main class="pt-20">
+    <main>
         <!-- Home Section -->
-        <section id="home" class="section">
-            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Computational Catalysis and Interfacial Chemistry(CCIC) </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Exploring the frontiers of intelligent systems, human-robot interaction, and machine perception to solve real-world challenges.</p>
+        <section id="home" class="section relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+             <!-- Slideshow Background -->
+            <div class="absolute top-0 left-0 w-full h-full z-0">
+                 <div class="slideshow-container">
+                    <img src="https://images.unsplash.com/photo-1635391132253-b2b504a43406?q=80&w=2070&auto=format&fit=crop" alt="Abstract molecular structure" class="slideshow-image">
+                    <img src="https://images.unsplash.com/photo-1532187643623-dbf26353d951?q=80&w=2070&auto=format&fit=crop" alt="Chemical lab equipment" class="slideshow-image">
+                    <img src="https://images.unsplash.com/photo-1628379346782-b67e8d2e8b83?q=80&w=1932&auto=format&fit=crop" alt="Graphene structure visualization" class="slideshow-image">
+                    <img src="https://images.unsplash.com/photo-1554474623-11d25c48b76c?q=80&w=2070&auto=format&fit=crop" alt="Scientist working in a lab" class="slideshow-image">
+                    <img src="https://images.unsplash.com/photo-1628379346761-9f5b6b1b5e4a?q=80&w=1932&auto=format&fit=crop" alt="3D molecular model" class="slideshow-image">
+                </div>
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Computational Catalysis and Interfacial Chemistry (CCIC)</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">Leveraging high-performance computing to unravel complex chemical processes at interfaces and design next-generation catalysts.</p>
                 <div class="mt-10">
                     <a href="#research" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">Explore Our Work</a>
                 </div>
@@ -96,39 +108,39 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Research</h2>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We focus on key areas to create intelligent systems that can perceive, reason, and act in complex environments.</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We focus on key areas of theoretical and computational chemistry to address challenges in sustainable energy and chemical synthesis.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Research Area 1 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                        <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Perception" alt="Machine Learning & Perception" class="w-full h-40 object-cover rounded-md mb-4">
+                        <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Heterogeneous+Catalysis" alt="Heterogeneous Catalysis" class="w-full h-40 object-cover rounded-md mb-4">
                         <div class="flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Machine Learning & Perception</h3>
-                            <p class="text-gray-600 text-sm">Developing novel algorithms for computer vision and deep learning to enable robots to understand their surroundings.</p>
+                            <h3 class="text-xl font-bold mb-2">Heterogeneous Catalysis</h3>
+                            <p class="text-gray-600 text-sm">Modeling reaction mechanisms on solid surfaces to design efficient catalysts for industrial applications, such as CO2 reduction and ammonia synthesis.</p>
                         </div>
                     </div>
                     <!-- Research Area 2 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Interaction" alt="Human-Robot Interaction" class="w-full h-40 object-cover rounded-md mb-4">
+                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Electrocatalysis" alt="Electrocatalysis" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Human-Robot Interaction</h3>
-                            <p class="text-gray-600 text-sm">Investigating intuitive and safe ways for humans and robots to collaborate, spanning shared autonomy and assistive robotics.</p>
+                            <h3 class="text-xl font-bold mb-2">Electrocatalysis & Energy</h3>
+                            <p class="text-gray-600 text-sm">Investigating electrochemical reactions for energy conversion and storage, including water splitting, fuel cells, and battery interfaces.</p>
                         </div>
                     </div>
                     <!-- Research Area 3 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Navigation" alt="Autonomous Navigation" class="w-full h-40 object-cover rounded-md mb-4">
+                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Surface+Science" alt="Surface Science" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Autonomous Navigation</h3>
-                            <p class="text-gray-600 text-sm">Designing robust control and planning systems for autonomous agents in dynamic and unstructured environments.</p>
+                            <h3 class="text-xl font-bold mb-2">Surface & Interfacial Science</h3>
+                            <p class="text-gray-600 text-sm">Understanding the structure and dynamics of solid-liquid and solid-gas interfaces at the atomic scale using first-principles simulations.</p>
                         </div>
                     </div>
                     <!-- Research Area 4 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Manipulation" alt="Robot Manipulation" class="w-full h-40 object-cover rounded-md mb-4">
+                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Materials+Informatics" alt="Materials Informatics" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Robot Manipulation & Control</h3>
-                            <p class="text-gray-600 text-sm">Creating systems that allow robots to physically interact with and manipulate objects with dexterity and precision.</p>
+                            <h3 class="text-xl font-bold mb-2">Materials Informatics</h3>
+                            <p class="text-gray-600 text-sm">Applying machine learning and data-driven approaches to accelerate the discovery and design of novel catalytic materials.</p>
                         </div>
                     </div>
                 </div>
@@ -136,11 +148,11 @@
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="section py-20">
+        <section id="publications" class="section py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured Publications</h2>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit our <a href="#" class="text-blue-600 font-medium hover:underline">publications page</a>.</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit Dr. Kunnikuruvan's <a href="#" class="text-blue-600 font-medium hover:underline">Google Scholar profile</a>.</p>
                 </div>
                 <div id="publications-list" class="space-y-8 max-w-4xl mx-auto">
                     <!-- JS will populate this -->
@@ -156,17 +168,17 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet the Team</h2>
-                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Our group is composed of dedicated researchers, students, and collaborators passionate about advancing AI and robotics.</p>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Our group is composed of dedicated researchers and students passionate about advancing computational chemistry.</p>
                 </div>
                 <!-- Principal Investigator -->
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold text-center mb-8">Principal Investigator</h3>
-                    <div class="max-w-md mx-auto bg-gray-50 rounded-lg p-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 shadow-sm">
-                        <img src="soorajK.jpg" onerror="this.onerror=null;this.src='https://placehold.co/120x120/666/fff?text=Dr.+Reed';" alt="Dr. Sooraj Kunnikuruvan" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md">
+                    <div class="max-w-xl mx-auto bg-gray-50 rounded-lg p-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 shadow-sm">
+                        <img src="https://placehold.co/128x128/666/fff?text=SK" onerror="this.onerror=null;this.src='https://placehold.co/128x128/666/fff?text=SK';" alt="Dr. Sooraj Kunnikuruvan" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md flex-shrink-0">
                         <div>
                             <h4 class="text-xl font-bold">Dr. Sooraj Kunnikuruvan</h4>
-                            <p class="text-blue-600">Principal Investigator, CCIC LAB</p>
-                            <p class="text-gray-600 mt-2 text-sm">Dr. Reed's research focuses on reinforcement learning and robot manipulation. She founded SARL in 2020 with a vision to build truly adaptive intelligent systems.</p>
+                            <p class="text-blue-600">Assistant Professor, Department of Chemistry</p>
+                            <p class="text-gray-600 mt-2 text-sm">Dr. Kunnikuruvan's research focuses on developing and applying computational methods to understand catalytic processes. He established the CCIC group at IIT Madras to tackle fundamental challenges in sustainable chemistry and energy.</p>
                         </div>
                     </div>
                 </div>
@@ -181,9 +193,9 @@
         </section>
 
         <!-- News Section -->
-        <section id="news" class="section py-20">
+        <section id="news" class="section py-20 bg-gray-50">
              <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
+                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest News</h2>
                     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Updates on our research, achievements, and events.</p>
                 </div>
@@ -197,13 +209,13 @@
         <section id="contact" class="section bg-blue-700 text-white py-20">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Join Our Team</h2>
-                <p class="mt-4 max-w-2xl mx-auto">We are always looking for talented and motivated PhD students and postdoctoral researchers to join our lab. If you are passionate about robotics and AI, we would love to hear from you.</p>
+                <p class="mt-4 max-w-2xl mx-auto">We are always looking for talented and motivated PhD students and postdoctoral researchers to join our lab. If you are passionate about computational chemistry, we would love to hear from you.</p>
                 <div class="mt-8">
-                    <a href="mailto:e.reed@university.edu" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">Contact Dr. Kunnikuruvan</a>
+                    <a href="mailto:soorajk@iitm.ac.in" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">Contact Dr. Kunnikuruvan</a>
                 </div>
                  <div class="mt-12 text-blue-100">
-                    <p class="font-semibold">Computational Catalysis and Interfacial Chemistry (CCIC) </p>
-                    <p>Department of Chemistry, IIT Madras, Old Building, Room XXX</p>
+                    <p class="font-semibold">Computational Catalysis and Interfacial Chemistry (CCIC)</p>
+                    <p>Department of Chemistry, IIT Madras, CH 205</p>
                     <p>Chennai, Tamil Nadu, 600036</p>
                 </div>
             </div>
@@ -214,8 +226,8 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; <span id="current-year"></span> Computational Catalysis and Interfacial Chemistry(CCIC) . All Rights Reserved.</p>
-            <p class="text-sm mt-2">Affiliated with the <a href="#" class="text-blue-400 hover:underline">University of Technology</a></p>
+            <p>&copy; <span id="current-year"></span> Computational Catalysis and Interfacial Chemistry (CCIC). All Rights Reserved.</p>
+            <p class="text-sm mt-2">Affiliated with the <a href="https://www.iitm.ac.in/" target="_blank" class="text-blue-400 hover:underline">Indian Institute of Technology Madras</a></p>
         </div>
     </footer>
 
@@ -226,37 +238,37 @@
 
         const publications = [
             {
-                title: "Learning Dexterous Manipulation from Human Demonstration",
-                authors: "Chen, L., Reed, E., Zhang, Y.",
-                journal: "Proceedings of Robotics: Science and Systems (RSS)",
+                title: "Understanding the Role of Surface Oxides in CO₂ Electroreduction on Copper",
+                authors: "Sharma, A., Kumar, R., Kunnikuruvan, S.",
+                journal: "Journal of the American Chemical Society",
                 year: "2025",
                 link: "#"
             },
             {
-                title: "Adaptive Sensor Fusion for Robust Localization in Dynamic Environments",
-                authors: "Patel, S., Kim, J., Reed, E.",
-                journal: "IEEE Transactions on Robotics",
+                title: "A DFT Study on the Mechanism of Nitrogen Reduction to Ammonia on Ruthenium-based Catalysts",
+                authors: "Pillai, N., Reddy, V., Kunnikuruvan, S.",
+                journal: "ACS Catalysis",
                 year: "2025",
                 link: "#"
             },
             {
-                title: "Natural Language Instructions for Collaborative Assembly Tasks",
-                authors: "Garcia, M., Reed, E.",
-                journal: "Conference on Robot Learning (CoRL)",
+                title: "First-Principles Analysis of the Solid-Electrolyte Interphase on Lithium Metal Anodes",
+                authors: "Gupta, S., Kunnikuruvan, S.",
+                journal: "Chemistry of Materials",
                 year: "2024",
                 link: "#"
             },
             {
-                title: "A Framework for Safe and Efficient Human-Robot Handovers",
-                authors: "Kim, J., Chen, L., Reed, E.",
-                journal: "International Conference on Robotics and Automation (ICRA)",
+                title: "Machine Learning-accelerated Screening of Bimetallic Alloys for Oxygen Evolution Reaction",
+                authors: "Kumar, R., Sharma, A., Kunnikuruvan, S.",
+                journal: "Journal of Physical Chemistry Letters",
                 year: "2024",
                 link: "#"
             },
             {
-                title: "Self-Supervised Learning for Terrain Classification in Off-Road Navigation",
-                authors: "Zhang, Y., Patel, S., Reed, E.",
-                journal: "Journal of Field Robotics",
+                title: "Water Adsorption and Dissociation on Ceria Surfaces: A Computational Perspective",
+                authors: "Reddy, V., Kunnikuruvan, S.",
+                journal: "The Journal of Chemical Physics",
                 year: "2023",
                 link: "#"
             }
@@ -264,104 +276,82 @@
 
         const teamMembers = [
             {
-                name: "Dr. Ben Carter",
+                name: "Dr. Anjali Sharma",
                 role: "Postdoctoral Researcher",
-                imageUrl: "./assets/images/team/ben-carter.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=AS"
             },
             {
-                name: "Liam Chen",
+                name: "Rahul Kumar",
                 role: "PhD Candidate",
-                imageUrl: "./assets/images/team/liam-chen.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=RK"
             },
             {
-                name: "Sanjay Patel",
+                name: "Vidya Reddy",
                 role: "PhD Candidate",
-                imageUrl: "./assets/images/team/sanjay-patel.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=VR"
             },
             {
-                name: "Maria Garcia",
+                name: "Nikhil Pillai",
                 role: "PhD Student",
-                imageUrl: "./assets/images/team/maria-garcia.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=NP"
             },
             {
-                name: "Joon Kim",
+                name: "Sneha Gupta",
                 role: "PhD Student",
-                imageUrl: "./assets/images/team/joon-kim.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=SG"
             },
             {
-                name: "Yuan Zhang",
-                role: "PhD Student",
-                imageUrl: "./assets/images/team/yuan-zhang.jpg"
-            },
-            {
-                name: "Aisha Khan",
+                name: "Arjun Menon",
                 role: "Masters Student",
-                imageUrl: "./assets/images/team/aisha-khan.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=AM"
             },
              {
-                name: "David Lee",
+                name: "Priya Singh",
                 role: "Masters Student",
-                imageUrl: "./assets/images/team/david-lee.jpg"
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=PS"
             }
         ];
 
         const newsItems = [
             {
-                title: "Liam Chen wins Best Paper Award at RSS 2025",
+                title: "Dr. Kunnikuruvan receives the Young Scientist Award",
                 date: "October 15, 2025",
-                excerpt: "Our lab's latest work on imitation learning for robotic manipulation was recognized at the prestigious Robotics: Science and Systems conference.",
+                excerpt: "Dr. Kunnikuruvan was recognized by the Chemical Research Society of India for his significant contributions to computational catalysis.",
                 imageUrl: "https://placehold.co/400x250/3B82F6/FFFFFF?text=Award"
             },
             {
-                title: "CCIC welcomes two new PhD students",
+                title: "CCIC welcomes new PhD students",
                 date: "September 1, 2025",
-                excerpt: "We are excited to welcome Maria Garcia and Joon Kim to the lab. They will be working on human-robot interaction and autonomous systems.",
+                excerpt: "We are excited to welcome Nikhil Pillai and Sneha Gupta to the lab. They will be working on electrocatalysis and materials informatics.",
                 imageUrl: "https://placehold.co/400x250/10B981/FFFFFF?text=Welcome"
             },
             {
-                title: "Our new drone testing facility is now operational",
+                title: "Our new high-performance computing cluster is online",
                 date: "August 20, 2025",
-                excerpt: "The new indoor flight arena allows for safe and repeatable experiments with our fleet of autonomous quadrotors.",
-                imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=Facility"
+                excerpt: "The new 'ChemCompute' cluster significantly enhances our computational capacity, enabling larger and more complex simulations.",
+                imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=HPC+Cluster"
             }
         ];
 
         // --- DYNAMIC CONTENT RENDERING ---
 
-        function renderPublications() {
+        function renderPublications(limit) {
             const list = document.getElementById('publications-list');
             list.innerHTML = '';
-            publications.slice(0, 3).forEach((p, index) => { // Initially show 3
+            const itemsToShow = limit ? publications.slice(0, limit) : publications;
+            
+            itemsToShow.forEach(p => {
                 const item = document.createElement('div');
                 item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200';
                 item.innerHTML = `
                     <p class="font-bold text-lg text-gray-900">${p.title}</p>
                     <p class="text-gray-600 mt-1">${p.authors}</p>
                     <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
-                    <a href="${p.link}" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
+                    <a href="${p.link}" target="_blank" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
                         Read Paper <span class="font-sans">&rarr;</span>
                     </a>`;
                 list.appendChild(item);
             });
-        }
-        
-        function renderAllPublications() {
-            const list = document.getElementById('publications-list');
-            list.innerHTML = '';
-            publications.forEach(p => {
-                const item = document.createElement('div');
-                item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-fade-in';
-                item.innerHTML = `
-                    <p class="font-bold text-lg text-gray-900">${p.title}</p>
-                    <p class="text-gray-600 mt-1">${p.authors}</p>
-                    <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
-                    <a href="${p.link}" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
-                        Read Paper <span class="font-sans">&rarr;</span>
-                    </a>`;
-                list.appendChild(item);
-            });
-             // Add a simple fade-in animation
-            list.style.animation = 'fadeIn 0.5s ease-in-out';
         }
 
         function renderTeamMembers() {
@@ -404,7 +394,7 @@
             feather.replace(); // Initialize Feather Icons
 
             // Render dynamic content
-            renderPublications();
+            renderPublications(3); // Initially show 3
             renderTeamMembers();
             renderNews();
 
@@ -430,10 +420,10 @@
             let allPublicationsShown = false;
             toggleBtn.addEventListener('click', () => {
                 if (allPublicationsShown) {
-                    renderPublications();
+                    renderPublications(3);
                     toggleBtn.textContent = 'Show All Publications';
                 } else {
-                    renderAllPublications();
+                    renderPublications(); // Render all
                     toggleBtn.textContent = 'Show Fewer';
                 }
                 allPublicationsShown = !allPublicationsShown;
@@ -454,4 +444,3 @@
     </script>
 </body>
 </html>
-
