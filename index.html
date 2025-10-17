@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computational Catalysis and Interfacial Chemistry(CCIC) | Research Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            scroll-margin-top: 80px; /* Adjust for fixed header height */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-600 text-white rounded-md p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <a href="#home" class="text-xl font-bold text-gray-900">CCIC</a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#research" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Research</a>
+                    <a href="#publications" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Publications</a>
+                    <a href="#team" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Team</a>
+                    <a href="#news" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">News</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all text-sm font-semibold">Join Us</a>
+                </nav>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Home</a>
+            <a href="#research" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Research</a>
+            <a href="#publications" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Publications</a>
+            <a href="#team" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Team</a>
+            <a href="#news" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">News</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Join Us</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">Computational Catalysis and Interfacial Chemistry(CCIC)</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Exploring the frontiers of intelligent systems, human-robot interaction, and machine perception to solve real-world challenges.</p>
+                <div class="mt-10">
+                    <a href="#research" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">Explore Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Research</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We focus on three core areas, aiming to create intelligent systems that can perceive, reason, and act in complex environments.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Research Area 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-block bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                            <i data-feather="cpu" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Machine Learning & Perception</h3>
+                        <p class="text-gray-600">Developing novel algorithms for computer vision, deep learning, and sensor fusion to enable robots to understand and interpret their surroundings with human-like acuity.</p>
+                    </div>
+                    <!-- Research Area 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                         <div class="inline-block bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                            <i data-feather="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Human-Robot Interaction</h3>
+                        <p class="text-gray-600">Investigating intuitive and safe ways for humans and robots to collaborate. Our work spans shared autonomy, natural language communication, and assistive robotics.</p>
+                    </div>
+                    <!-- Research Area 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                         <div class="inline-block bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                            <i data-feather="move" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Autonomous Navigation</h3>
+                        <p class="text-gray-600">Designing robust control and planning systems for autonomous agents, from drones to ground vehicles, focusing on navigating dynamic and unstructured environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured Publications</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit our <a href="#" class="text-blue-600 font-medium hover:underline">publications page</a>.</p>
+                </div>
+                <div id="publications-list" class="space-y-8 max-w-4xl mx-auto">
+                    <!-- JS will populate this -->
+                </div>
+                 <div class="text-center mt-12">
+                    <button id="toggle-publications-btn" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">Show All Publications</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet the Team</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Our group is composed of dedicated researchers, students, and collaborators passionate about advancing AI and robotics.</p>
+                </div>
+                <!-- Principal Investigator -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-bold text-center mb-8">Principal Investigator</h3>
+                    <div class="max-w-md mx-auto bg-gray-50 rounded-lg p-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 shadow-sm">
+                        <img src="https://placehold.co/120x120/EBF4FF/3B82F6?text=PI" alt="Dr. Sooraj kunnikuruvan" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md">
+                        <div>
+                            <h4 class="text-xl font-bold">Dr. Sooraj Kunnikuruvan</h4>
+                            <p class="text-blue-600">Director, SARL</p>
+                            <p class="text-gray-600 mt-2 text-sm">Dr. Reed's research focuses on reinforcement learning and robot manipulation. She founded SARL in 2020 with a vision to build truly adaptive intelligent systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Members -->
+                <div>
+                    <h3 class="text-2xl font-bold text-center mb-8">Researchers & Students</h3>
+                    <div id="team-members-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <!-- JS will populate this -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest News</h2>
+                    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Updates on our research, achievements, and events.</p>
+                </div>
+                <div id="news-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-blue-700 text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Join Our Team</h2>
+                <p class="mt-4 max-w-2xl mx-auto">We are always looking for talented and motivated PhD students and postdoctoral researchers to join our lab. If you are passionate about robotics and AI, we would love to hear from you.</p>
+                <div class="mt-8">
+                    <a href="mailto:e.reed@university.edu" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">Contact Dr. Kunnikuruvan</a>
+                </div>
+                 <div class="mt-12 text-blue-100">
+                    <p class="font-semibold">Computational Catalysis and Interfacial Chemistry(CCIC)</p>
+                    <p>123 University Drive, Building 42, Room 101</p>
+                    <p>City, State, 12345</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> Computational Catalysis and Interfacial Chemistry(CCIC). All Rights Reserved.</p>
+            <p class="text-sm mt-2">Affiliated with the <a href="#" class="text-blue-400 hover:underline">University of Technology</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- DATA ---
+        // You can easily update the website content by modifying the data below.
+
+        const publications = [
+            {
+                title: "Learning Dexterous Manipulation from Human Demonstration",
+                authors: "Chen, L., Reed, E., Zhang, Y.",
+                journal: "Proceedings of Robotics: Science and Systems (RSS)",
+                year: "2025",
+                link: "#"
+            },
+            {
+                title: "Adaptive Sensor Fusion for Robust Localization in Dynamic Environments",
+                authors: "Patel, S., Kim, J., Reed, E.",
+                journal: "IEEE Transactions on Robotics",
+                year: "2025",
+                link: "#"
+            },
+            {
+                title: "Natural Language Instructions for Collaborative Assembly Tasks",
+                authors: "Garcia, M., Reed, E.",
+                journal: "Conference on Robot Learning (CoRL)",
+                year: "2024",
+                link: "#"
+            },
+            {
+                title: "A Framework for Safe and Efficient Human-Robot Handovers",
+                authors: "Kim, J., Chen, L., Reed, E.",
+                journal: "International Conference on Robotics and Automation (ICRA)",
+                year: "2024",
+                link: "#"
+            },
+            {
+                title: "Self-Supervised Learning for Terrain Classification in Off-Road Navigation",
+                authors: "Zhang, Y., Patel, S., Reed, E.",
+                journal: "Journal of Field Robotics",
+                year: "2023",
+                link: "#"
+            }
+        ];
+
+        const teamMembers = [
+            {
+                name: "Dr. Ben Carter",
+                role: "Postdoctoral Researcher",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=BC"
+            },
+            {
+                name: "Liam Chen",
+                role: "PhD Candidate",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=LC"
+            },
+            {
+                name: "Sanjay Patel",
+                role: "PhD Candidate",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=SP"
+            },
+            {
+                name: "Maria Garcia",
+                role: "PhD Student",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=MG"
+            },
+            {
+                name: "Joon Kim",
+                role: "PhD Student",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=JK"
+            },
+            {
+                name: "Yuan Zhang",
+                role: "PhD Student",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=YZ"
+            },
+            {
+                name: "Aisha Khan",
+                role: "Masters Student",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=AK"
+            },
+             {
+                name: "David Lee",
+                role: "Masters Student",
+                imageUrl: "https://placehold.co/200x200/EBF4FF/3B82F6?text=DL"
+            }
+        ];
+
+        const newsItems = [
+            {
+                title: "Liam Chen wins Best Paper Award at RSS 2025",
+                date: "October 15, 2025",
+                excerpt: "Our lab's latest work on imitation learning for robotic manipulation was recognized at the prestigious Robotics: Science and Systems conference.",
+                imageUrl: "https://placehold.co/400x250/3B82F6/FFFFFF?text=Award"
+            },
+            {
+                title: "SARL welcomes two new PhD students",
+                date: "September 1, 2025",
+                excerpt: "We are excited to welcome Maria Garcia and Joon Kim to the lab. They will be working on human-robot interaction and autonomous systems.",
+                imageUrl: "https://placehold.co/400x250/10B981/FFFFFF?text=Welcome"
+            },
+            {
+                title: "Our new drone testing facility is now operational",
+                date: "August 20, 2025",
+                excerpt: "The new indoor flight arena allows for safe and repeatable experiments with our fleet of autonomous quadrotors.",
+                imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=Facility"
+            }
+        ];
+
+        // --- DYNAMIC CONTENT RENDERING ---
+
+        function renderPublications() {
+            const list = document.getElementById('publications-list');
+            list.innerHTML = '';
+            publications.slice(0, 3).forEach((p, index) => { // Initially show 3
+                const item = document.createElement('div');
+                item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200';
+                item.innerHTML = `
+                    <p class="font-bold text-lg text-gray-900">${p.title}</p>
+                    <p class="text-gray-600 mt-1">${p.authors}</p>
+                    <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
+                    <a href="${p.link}" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
+                        Read Paper <span class="font-sans">&rarr;</span>
+                    </a>`;
+                list.appendChild(item);
+            });
+        }
+        
+        function renderAllPublications() {
+            const list = document.getElementById('publications-list');
+            list.innerHTML = '';
+            publications.forEach(p => {
+                const item = document.createElement('div');
+                item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200 animate-fade-in';
+                item.innerHTML = `
+                    <p class="font-bold text-lg text-gray-900">${p.title}</p>
+                    <p class="text-gray-600 mt-1">${p.authors}</p>
+                    <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
+                    <a href="${p.link}" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
+                        Read Paper <span class="font-sans">&rarr;</span>
+                    </a>`;
+                list.appendChild(item);
+            });
+             // Add a simple fade-in animation
+            list.style.animation = 'fadeIn 0.5s ease-in-out';
+        }
+
+        function renderTeamMembers() {
+            const list = document.getElementById('team-members-list');
+            list.innerHTML = '';
+            teamMembers.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'text-center';
+                card.innerHTML = `
+                    <img src="${member.imageUrl}" alt="${member.name}" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-white">
+                    <h4 class="font-bold text-lg">${member.name}</h4>
+                    <p class="text-blue-600">${member.role}</p>`;
+                list.appendChild(card);
+            });
+        }
+
+        function renderNews() {
+            const list = document.getElementById('news-list');
+            list.innerHTML = '';
+            newsItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300';
+                card.innerHTML = `
+                    <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <p class="text-sm text-gray-500 mb-2">${item.date}</p>
+                        <h4 class="font-bold text-xl mb-3">${item.title}</h4>
+                        <p class="text-gray-600">${item.excerpt}</p>
+                        <a href="#" class="inline-block mt-4 text-blue-600 font-semibold text-sm hover:underline">
+                            Read More <span class="font-sans">&rarr;</span>
+                        </a>
+                    </div>`;
+                list.appendChild(card);
+            });
+        }
+
+        // --- EVENT LISTENERS & INITIALIZATION ---
+
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace(); // Initialize Feather Icons
+
+            // Render dynamic content
+            renderPublications();
+            renderTeamMembers();
+            renderNews();
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Toggle publications list
+            const toggleBtn = document.getElementById('toggle-publications-btn');
+            let allPublicationsShown = false;
+            toggleBtn.addEventListener('click', () => {
+                if (allPublicationsShown) {
+                    renderPublications();
+                    toggleBtn.textContent = 'Show All Publications';
+                } else {
+                    renderAllPublications();
+                    toggleBtn.textContent = 'Show Fewer';
+                }
+                allPublicationsShown = !allPublicationsShown;
+            });
+            
+            // Header shadow on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-md');
+                    header.classList.remove('shadow-sm');
+                } else {
+                    header.classList.add('shadow-sm');
+                    header.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
