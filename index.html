@@ -293,11 +293,20 @@
         ];
 
         const teamMembers = [
-            { name: "Jogeshwar Chhatria", join: "2022-present", role: "PhD Student" }, { name: "Madhurja Buragohain", role: "PhD Student" }, { name: "Sudhin Rathnakumaran", role: "PhD Student" }, { name: "Athira Jayasankar", role: "PhD Student" }, { name: "Anjana Vijayan", role: "PhD Student" }, { name: "Stuti Gupta", role: "project Student" }
-        ]; 
+            { name: "Jogeshwar Chhatria", role: "PhD Student", joiningDate: "July 2022" }, 
+            { name: "Madhurja Buragohain", role: "PhD Student", joiningDate: "July 2022" }, 
+            { name: "Sudhin Rathnakumaran", role: "PhD Student", joiningDate: "July 2023" }, 
+            { name: "Athira Jayasankar", role: "PhD Student", joiningDate: "July 2024" }, 
+            { name: "Anjana Vijayan", role: "PhD Student", joiningDate: "July 2025" }, 
+            { name: "Stuti Gupta", role: "Project Student", joiningDate: "July 2025" }, 
+            { name: "Arjun Menon", role: "Masters Student", joiningDate: "July 2025" }, 
+            { name: "Priya Singh", role: "Masters Student", joiningDate: "July 2025" }
+        ];
 
         const teamAlumni = [
-            { name: "Dr. Alok Sharma", role: "Postdoc at MIT", where: "PhD, 2024" }, { name: "Dr. Meera Iyer", role: "Scientist at Shell", where: "PhD, 2023" }, { name: "Rajesh Gupta", role: "Data Scientist at Google", where: "MSc, 2022" },
+            { name: "Dr. Pragin", role: "Works at TCS", where: "Post Doc, 2024 (CCIC LAB)" }, 
+            { name: "Dr. XXX ", role: "Scientist at Shell", where: "PhD, 2023" }, 
+            { name: "XXXXX   XXXXX", role: "Data Scientist at Google", where: "MSc, 2022" },
         ];
 
         const newsItems = [
@@ -350,6 +359,9 @@
                 const imageUrl = member.imageUrl || `https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}`;
                 
                 let description = `<p class="text-blue-600">${member.role}</p>`;
+                if (member.joiningDate) {
+                    description += `<p class="text-gray-500 text-sm mt-1">Joined: ${member.joiningDate}</p>`;
+                }
                 if (member.where) {
                     description += `<p class="text-gray-500 text-sm mt-1">${member.where}</p>`;
                 }
