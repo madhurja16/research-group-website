@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <!-- Favicon Added -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
     <style>
         body {
@@ -46,7 +45,7 @@
         .slideshow-image:nth-child(4) { animation-delay: 15s; }
         .slideshow-image:nth-child(5) { animation-delay: 20s; }
         .slideshow-image:nth-child(6) { animation-delay: 25s; }
-        
+         
         /* Style for active navigation link */
         .nav-link.active {
             color: #2563EB; /* blue-600 */
@@ -61,7 +60,6 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header & Navigation -->
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -83,7 +81,6 @@
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
             <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Home</a>
             <a href="#research" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 mobile-link">Research</a>
@@ -96,9 +93,7 @@
     </header>
 
     <main>
-        <!-- Home Section -->
         <section id="home" class="section relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-            <!-- Slideshow Background -->
             <div class="absolute top-0 left-0 w-full h-full z-0">
                 <div class="slideshow-container">
                     <img src="SlideShow_ANJANA.png" alt="Abstract molecular structure" class="slideshow-image">
@@ -110,7 +105,7 @@
                 </div>
                 <div class="absolute inset-0 bg-black/60"></div>
             </div>
-            
+             
             <div class="container mx-auto px-6 py-20 md:py-32 text-center relative z-10">
                 <h1 class="text-4xl md:text-6xl font-bold leading-tight">Computational Catalysis and Interfacial Chemistry (CCIC)</h1>
                 <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">Leveraging high-performance computing to unravel complex chemical processes at interfaces and design next-generation catalysts.</p>
@@ -120,7 +115,6 @@
             </div>
         </section>
 
-        <!-- Research Section -->
         <section id="research" class="section bg-white py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -128,7 +122,6 @@
                     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">We focus on key areas of theoretical and computational chemistry to address challenges in sustainable energy and chemical synthesis.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Research Area 1 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
                         <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Heterogeneous+Catalysis" alt="ADD IMAGE" class="w-full h-40 object-cover rounded-md mb-4">
                         <div class="flex-grow">
@@ -136,7 +129,6 @@
                             <p class="text-gray-600 text-sm">Modeling reaction mechanisms on solid surfaces to design efficient catalysts for industrial applications, such as CO₂ reduction and ammonia synthesis.</p>
                         </div>
                     </div>
-                    <!-- Research Area 2 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
                          <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Electrocatalysis" alt="ADD IMAGE" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
@@ -144,7 +136,6 @@
                              <p class="text-gray-600 text-sm">Investigating electrochemical reactions for energy conversion and storage, including water splitting, fuel cells, and battery interfaces.</p>
                          </div>
                     </div>
-                    <!-- Research Area 3 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
                          <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Surface+Science" alt="ADD IMAGE" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
@@ -152,7 +143,6 @@
                              <p class="text-gray-600 text-sm">Understanding the structure and dynamics of solid-liquid and solid-gas interfaces at the atomic scale using first-principles simulations.</p>
                          </div>
                     </div>
-                    <!-- Research Area 4 -->
                     <div class="bg-gray-50 p-6 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
                          <img src="https://placehold.co/400x250/EBF4FF/3B82F6?text=Materials+Informatics" alt="ADD IMAGE" class="w-full h-40 object-cover rounded-md mb-4">
                          <div class="flex-grow">
@@ -164,14 +154,12 @@
             </div>
         </section>
 
-        <!-- Team Section -->
         <section id="team" class="section bg-white py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Meet the Team</h2>
                     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Our group is composed of dedicated researchers and students passionate about advancing computational chemistry.</p>
                 </div>
-                <!-- Principal Investigator -->
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold text-center mb-8">Principal Investigator</h3>
                     <div class="max-w-xl mx-auto bg-gray-50 rounded-lg p-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 shadow-sm">
@@ -200,64 +188,52 @@
                         </div>
                     </div>
                 </div>
-                <!-- Members -->
                 <div class="mb-16">
                     <h3 class="text-2xl font-bold text-center mb-8">Researchers & Students</h3>
                     <div id="team-members-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
-                        <!-- JS will populate this -->
-                    </div>
+                        </div>
                 </div>
-                <!-- Alumni Section -->
                 <div>
                     <h3 class="text-2xl font-bold text-center mb-8">Alumni</h3>
-                    <!-- Postdoc Alumni -->
                     <div class="mb-12">
                         <h4 class="text-xl font-semibold text-center text-gray-700 mb-6">Postdocs & PhD</h4>
                         <div id="team-alumni-postdoc-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
-                            <!-- JS will populate this -->
-                        </div>
+                            </div>
                     </div>
-                    <!-- MSc Alumni -->
                     <div>
                         <h4 class="text-xl font-semibold text-center text-gray-700 mb-6">MSc Students</h4>
                         <div id="team-alumni-msc-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
-                            <!-- JS will populate this -->
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Publications Section -->
         <section id="publications" class="section py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured Publications</h2>
                     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A selection of our recent contributions to the field. For a full list, visit Dr. Kunnikuruvan's <a href="https://scholar.google.com/citations?user=DCJi8BkAAAAJ&hl=en" target="_blank" class="text-blue-600 font-medium hover:underline">Google Scholar profile</a>.</p>
                 </div>
-                <div id="publications-list" class="space-y-8 max-w-4xl mx-auto">
-                    <!-- JS will populate this -->
-                </div>
+                <div id="publications-list" class="space-y-12 max-w-5xl mx-auto">
+                    </div>
                  <div class="text-center mt-12">
                      <button id="toggle-publications-btn" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-all">Show All Publications</button>
                  </div>
             </div>
         </section>
 
-        <!-- News Section -->
-        <section id="news" class="section py-20 bg-gray-50">
+        <section id="news" class="section py-20 bg-white">
              <div class="container mx-auto px-6">
                  <div class="text-center mb-16">
                      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest News</h2>
                      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Updates on our research, achievements, and events.</p>
                  </div>
                  <div id="news-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                     <!-- JS will populate this -->
-                 </div>
+                     </div>
              </div>
         </section>
 
-        <!-- Photo Gallery Section -->
         <section id="gallery" class="section bg-white py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
@@ -265,12 +241,10 @@
                      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">A glimpse into our lab, conferences, and team activities.</p>
                  </div>
                  <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                     <!-- JS will populate this -->
-                 </div>
+                     </div>
             </div>
        </section>
         
-        <!-- Contact Section -->
         <section id="contact" class="section bg-blue-700 text-white py-20">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Join Our Team</h2>
@@ -286,7 +260,6 @@
             </div>
         </section>
 
-        <!-- Gallery Modal -->
         <div id="gallery-modal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
             <div class="bg-white rounded-lg max-w-4xl max-h-full w-full h-auto p-4 relative">
                 <button id="modal-close-btn" class="absolute -top-4 -right-4 bg-white rounded-full p-2 z-10">
@@ -299,7 +272,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; <span id="current-year"></span> Computational Catalysis and Interfacial Chemistry (CCIC). All Rights Reserved.</p>
@@ -405,7 +377,7 @@
              excerpt: "A big congratulations to our lab member Jogeswar Chhatria, who has been awarded the Best Poster in Theoretical Chemistry at the Chemistry In-House Symposium 2024 conducted by Department of Chemistry, Indian Institute of Technology, Madras.", 
              imageUrl: "https://placehold.co/400x250/F59E0B/FFFFFF?text=Best Poster Award" }
         ];
-        
+         
         const galleryImages = [
             { src: "Aug2_2025.png", caption: "Good food, great company • Soumya’s Farewell Dinner • 02/08/25" },
             { src: "Oct9_2024.png", caption: "Celebrating teamwork, curiosity, and countless hours at the bench with a well-deserved dinner outing. Oct 2, 2024, was a night to remember for our incredible lab family!" },
@@ -419,23 +391,58 @@
 
         function renderPublications(limit) {
             const list = document.getElementById('publications-list');
-            list.innerHTML = '';
-            const itemsToShow = limit ? publications.slice(0, limit) : publications;
-            
-            itemsToShow.forEach(p => {
-                const item = document.createElement('div');
-                item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200';
-                item.innerHTML = `
-                    <p class="font-bold text-lg text-gray-900">${p.title}</p>
-                    <p class="text-gray-600 mt-1">${p.authors}</p>
-                    <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
-                    <a href="${p.link}" target="_blank" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
-                        Read Paper <span class="font-sans">&rarr;</span>
-                    </a>`;
-                list.appendChild(item);
+            list.innerHTML = ''; // Clear previous content
+
+            // Sort publications by year, most recent first
+            const sortedPublications = [...publications].sort((a, b) => b.year - a.year);
+            const itemsToShow = limit ? sortedPublications.slice(0, limit) : sortedPublications;
+
+            // Group publications by year
+            const groupedByYear = itemsToShow.reduce((acc, p) => {
+                if (!acc[p.year]) {
+                    acc[p.year] = [];
+                }
+                acc[p.year].push(p);
+                return acc;
+            }, {});
+
+            // Get sorted years (already in descending order from the initial sort)
+            const sortedYears = Object.keys(groupedByYear).sort((a, b) => b - a);
+
+            // Render publications for each year
+            sortedYears.forEach(year => {
+                const yearSection = document.createElement('div');
+                yearSection.className = 'flex flex-col md:flex-row gap-4 md:gap-8';
+
+                const yearColumn = `
+                    <div class="md:w-1/12 flex-shrink-0">
+                        <h3 class="text-2xl font-bold text-gray-800 md:sticky md:top-24">${year}</h3>
+                    </div>`;
+
+                const pubsColumn = document.createElement('div');
+                pubsColumn.className = 'md:w-11/12 space-y-6';
+
+                groupedByYear[year].forEach(p => {
+                    const item = document.createElement('div');
+                    item.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200 transition-shadow duration-300 hover:shadow-lg';
+                    item.innerHTML = `
+                        <p class="font-bold text-lg text-gray-900">${p.title}</p>
+                        <p class="text-gray-600 mt-1 text-sm">${p.authors}</p>
+                        <p class="text-sm text-gray-500 mt-2"><em>${p.journal}</em>, ${p.year}</p>
+                        ${p.link && p.link !== '#' ? `
+                        <a href="${p.link}" target="_blank" class="inline-block mt-3 text-blue-600 font-semibold text-sm hover:underline">
+                            Read Paper <span class="font-sans">&rarr;</span>
+                        </a>` : ''}
+                    `;
+                    pubsColumn.appendChild(item);
+                });
+                
+                yearSection.innerHTML = yearColumn;
+                yearSection.appendChild(pubsColumn);
+                list.appendChild(yearSection);
             });
         }
-        
+         
         function renderTeam(members, containerId) {
              const list = document.getElementById(containerId);
              if (!list) return;
@@ -456,71 +463,42 @@
 
                  let socialLinks = '';
                  if (member.linkedin && member.email) {
-                    socialLinks = `
-                        <div class="flex justify-center space-x-3 mt-2">
-                           <a href="${member.linkedin}" target="_blank" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="linkedin" class="w-5 h-5"></i>
-                           </a>
-                           <a href="mailto:${member.email}" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="mail" class="w-5 h-5"></i>
-                           </a>
-                        </div>`;
+                     socialLinks = `
+                         <div class="flex justify-center space-x-3 mt-2">
+                             <a href="${member.linkedin}" target="_blank" class="text-gray-400 hover:text-blue-600">
+                                 <i data-feather="linkedin" class="w-5 h-5"></i>
+                             </a>
+                             <a href="mailto:${member.email}" class="text-gray-400 hover:text-blue-600">
+                                 <i data-feather="mail" class="w-5 h-5"></i>
+                             </a>
+                         </div>`;
                  }
 
                  card.innerHTML = `
                      <img src="${imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}';" alt="${member.name}" class="w-40 h-40 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-white">
                      <h4 class="font-bold text-lg">${member.name}</h4>
                      ${description}
-                     ${socialLinks}`;
+                     ${socialLinks}
+                 `;
                  list.appendChild(card);
              });
-             feather.replace(); // Re-initialize Feather Icons after adding new icons
+             feather.replace(); // Re-initialize Feather icons after adding new elements
         }
-        
-        // Specific function for Alumni without social links
-        function renderAlumni(members, containerId) {
-            const list = document.getElementById(containerId);
-            if (!list) return;
-            list.innerHTML = '';
-            members.forEach(member => {
-                const card = document.createElement('div');
-                card.className = 'text-center';
-                const initials = member.name.split(' ').map(n => n[0]).join('');
-                const imageUrl = member.imageUrl || `https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}`;
-                
-                let description = `<p class="text-blue-600">${member.role}</p>`;
-                 if (member.where) {
-                    description += `<p class="text-gray-500 text-sm mt-1">${member.where}</p>`;
-                }
-
-                card.innerHTML = `
-                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
-                        <img src="${imageUrl}" onerror="this.onerror=null;this.src='https://placehold.co/200x200/EBF4FF/3B82F6?text=${initials}';" alt="${member.name}" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-white">
-                        <h4 class="font-bold text-lg">${member.name}</h4>
-                        ${description}
-                    </div>`;
-                list.appendChild(card);
-            });
-        }
-
-
 
         function renderNews() {
             const list = document.getElementById('news-list');
             list.innerHTML = '';
             newsItems.forEach(item => {
                 const card = document.createElement('div');
-                card.className = 'bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300';
+                card.className = 'bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200';
                 card.innerHTML = `
                     <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <p class="text-sm text-gray-500 mb-2">${item.date}</p>
-                        <h4 class="font-bold text-xl mb-3">${item.title}</h4>
-                        <p class="text-gray-600">${item.excerpt}</p>
-                        <a href="#" class="inline-block mt-4 text-blue-600 font-semibold text-sm hover:underline">
-                            Read More <span class="font-sans">&rarr;</span>
-                        </a>
-                    </div>`;
+                        <h3 class="font-bold text-lg mb-3">${item.title}</h3>
+                        <p class="text-gray-600 text-sm">${item.excerpt}</p>
+                    </div>
+                `;
                 list.appendChild(card);
             });
         }
@@ -530,21 +508,22 @@
             const modal = document.getElementById('gallery-modal');
             const modalImg = document.getElementById('modal-image');
             const modalCaption = document.getElementById('modal-caption');
-            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const closeBtn = document.getElementById('modal-close-btn');
 
-            galleryImages.forEach(image => {
-                const imgContainer = document.createElement('div');
-                imgContainer.className = 'cursor-pointer group';
-                imgContainer.innerHTML = `<img src="${image.src}" alt="${image.caption}" class="w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300 shadow-md">`;
-                imgContainer.addEventListener('click', () => {
-                    modalImg.src = image.src;
-                    modalCaption.textContent = image.caption;
+            grid.innerHTML = '';
+            galleryImages.forEach(img => {
+                const item = document.createElement('div');
+                item.className = 'aspect-w-1 aspect-h-1 cursor-pointer overflow-hidden rounded-lg group';
+                item.innerHTML = `<img src="${img.src}" alt="${img.caption}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300">`;
+                item.addEventListener('click', () => {
+                    modalImg.src = img.src;
+                    modalCaption.textContent = img.caption;
                     modal.classList.remove('hidden');
                 });
-                grid.appendChild(imgContainer);
+                grid.appendChild(item);
             });
-            
-            modalCloseBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+            closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     modal.classList.add('hidden');
@@ -552,21 +531,37 @@
             });
         }
 
-        // --- EVENT LISTENERS & INITIALIZATION ---
+
+        // --- INITIALIZATION ---
 
         document.addEventListener('DOMContentLoaded', function() {
-            feather.replace();
-            
-            // Set current year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Render dynamic content
-            renderPublications(4); // Show first 4 initially
+            // Initial renders
+            renderPublications(4); // Initially show 4 publications
             renderTeam(teamMembers, 'team-members-list');
-            renderAlumni(postdocAlumni, 'team-alumni-postdoc-list');
-            renderAlumni(mscAlumni, 'team-alumni-msc-list');
+            renderTeam(postdocAlumni, 'team-alumni-postdoc-list');
+            renderTeam(mscAlumni, 'team-alumni-msc-list');
             renderNews();
             renderGallery();
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Feather Icons
+            feather.replace();
+
+            // "Show All" button functionality
+            const toggleBtn = document.getElementById('toggle-publications-btn');
+            let allShown = false;
+            toggleBtn.addEventListener('click', () => {
+                allShown = !allShown;
+                if (allShown) {
+                    renderPublications(); // Render all
+                    toggleBtn.textContent = 'Show Less';
+                } else {
+                    renderPublications(4); // Render limited
+                    toggleBtn.textContent = 'Show All Publications';
+                }
+            });
 
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -582,49 +577,38 @@
                 });
             });
 
-            // "Show All" publications button
-            const toggleBtn = document.getElementById('toggle-publications-btn');
-            toggleBtn.addEventListener('click', () => {
-                const isShowingAll = toggleBtn.textContent.includes('All');
-                if (isShowingAll) {
-                    renderPublications();
-                    toggleBtn.textContent = 'Show Less';
-                } else {
-                    renderPublications(4);
-                    toggleBtn.textContent = 'Show All Publications';
-                }
-            });
-
-            // Header shrink on scroll
-            const header = document.getElementById('header');
+            // Active nav link highlighting on scroll
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
             window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 90) { // 90px offset for header
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Header shrink on scroll
+                const header = document.getElementById('header');
                 if (window.scrollY > 50) {
                     header.classList.add('py-2');
                     header.classList.remove('py-4');
                 } else {
-                    header.classList.remove('py-2');
                     header.classList.add('py-4');
+                    header.classList.remove('py-2');
                 }
-            });
-            
-            // Active nav link highlighting
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
-                        });
-                    }
-                });
-            }, { rootMargin: "-50% 0px -50% 0px" });
-
-            sections.forEach(section => {
-                observer.observe(section);
             });
         });
     </script>
+
 </body>
 </html>
